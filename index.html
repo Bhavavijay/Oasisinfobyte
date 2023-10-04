@@ -3,218 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css">
-
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    
-<!-- header section starts  -->
-
-<header>
-
-    <div class="user">
-        
-        <h3 class="name">Bhavadharani</h3>
-        <p class="post">Web & Graphic Designer</p>
+<style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <input type="number" id="temperature" placeholder="Enter temperature">
+        <select id="unit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+        </select>
+        <button onclick="convertTemperature()">Convert</button>
+        <p id="result"></p>
     </div>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#education">skills</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-<!-- header section ends -->
-
-<div id="menu" class="fas fa-bars"></div>
-
-<!-- home section starts  -->
-
-<section class="home" id="home">
-
-    <h3>HEY! !</h3>
-    <h1>This is  <span> Bhavadharani</span></h1>
-    <p>I'm currently persuing 3rd year computer science engineering in DHAANISH AHMED College of Engineering, Chennai. Passionate about Web Development designing and looking forward for freelancing and internships.
-    </p>
-    <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
-
-</section>
-
-<!-- home section ends -->
-
-<!-- about section starts  -->
-
-<section class="about" id="about">
-
-<h1 class="heading"> <span>about</span> me </h1>
-
-<div class="row">
-
-    <div class="info">
-        <h3> <span> qualification </span> B.E (Computer Science) 2021-2025 </h3>
-        <h3> <span> Date of Birth: </span> 26.11.2003 </h3>
-
-        <h3> <span> language : </span> Tamil, English </h3>
-        <a href="DOC-20230621-WA0004. (4).pdf"btn"> download CV <i class="fas fa-download"></i> </button></a>
-    </div>
-
-    <div class="counter">
-
-        <div class="box">
-            <span>#</span>
-            <h3>years of experience</h3>
-        </div>
-
-        <div class="box">
-            <span>1</span>
-            <h3>project completed</h3>
-        </div>
-
-        <div class="box">
-            <span>1</span>
-            <h3>happy clients</h3>
-        </div>
-
-        <div class="box">
-            <span>2</span>
-            <h3>internships completed</h3>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- about section ends -->
-
-<!-- education section starts  -->
-
-<section class="skill" id="skills">
-    <div class="heading">
-        <h1>Skills</h1>
-    </div>
-   
-  <div class="skill-bars">
-    <div class="bar">
-      <div class="info">
-        <span>HTML & CSS</span>
-      </div>
-      <div class="progress-line html">
-        <span></span>
-      </div>
-    </div>
-    <div class="bar">
-      <div class="info">
-        <span>Web Development</span>
-      </div>
-      <div class="progress-line jquery">
-        <span></span>
-      </div>
-    </div>
-    <div class="bar">
-      <div class="info">
-        <span>Python</span>
-      </div>
-      <div class="progress-line python">
-        <span></span>
-      </div>
-    </div>
-    <div class="bar">
-      <div class="info">
-        <span>Java</span>
-      </div>
-      <div class="progress-line python">
-        <span></span>
-      </div>
-    </div>
-    <div class="bar">
-      <div class="info">
-        <span>Python in Finanace</span>
-      </div>
-      <div class="progress-line mysql">
-        <span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- education section ends -->
-
-<!-- portfolio section starts  -->
-
-
-<!-- portfolio section ends -->
-
-<!-- contact section starts  -->
-
-<section class="contact" id="contact">
-
-<h1 class="heading"> <span></span>  </h1>
-
-<div class="row">
-
-    <div class="content">
-
-        <h3 class="title">contact info</h3>
-        
-        <div class="info">
-            <h3> <i class="fas fa-envelope"></i> <a href="mailto:bhavavijay16@gmail.com"> bhavavijay16@gmail.com </a> </h3>
-            <h3> <i class="fab fa-github"></i> <a href="https://github.com/Bhavavijay"> Bhavavijay</a>  </h3>
-            <h3> <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/Bhavadharani-v-69134224a"> Bhavadharani V
-            <h3> <i class="fas fa-map-marker-alt"></i> chennai, india - 600082. </h3>
-        </div>
-
-    </div>
-
-    
-
-</div>
-
-</section>
-
-<!-- contact section ends -->
-
-
-<!-- scroll top button  -->
-
-<a href="#home" class="top">
-    <img src="images/scroll-top-img.png" alt="">
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- jquery cdn link  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!-- custom js file link  -->
-<script src="script.js"></script>
-
-
+    <script>
+        function convertTemperature() {
+            const temperatureInput = document.getElementById("temperature").value;
+            const unit = document.getElementById("unit").value;
+            const resultElement = document.getElementById("result");
+            
+            if (unit === "celsius") {
+                const fahrenheit = (temperatureInput * 9/5) + 32;
+                resultElement.innerText = `Result: ${temperatureInput} Celsius = ${fahrenheit} Fahrenheit`;
+            } else {
+                const celsius = (temperatureInput - 32) * 5/9;
+                resultElement.innerText = `Result: ${temperatureInput} Fahrenheit = ${celsius} Celsius`;
+            }
+        }
+    </script>
 </body>
 </html>
 
+</body>
+</html>
